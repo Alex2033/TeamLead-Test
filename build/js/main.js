@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('.to-order').click(function() {
+    $('.to-order').click(function(event) {
         event.preventDefault();
 
 	    $('html, body').animate({
