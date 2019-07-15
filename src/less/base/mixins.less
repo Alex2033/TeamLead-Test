@@ -1,0 +1,101 @@
+.xl(@name, @value){
+    @media screen and (max-width: @xl){
+        @{name}: @value;
+    }
+}
+
+.xl-block(@content){
+    @media screen and (max-width: @xl){
+        @content();
+    }
+}
+
+.lg(@name, @value){
+    @media screen and (max-width: @lg){
+        @{name}: @value;
+    }
+}
+
+.lg-block(@content){
+    @media screen and (max-width: @lg){
+        @content();
+    }
+}
+
+.md(@name, @value){
+    @media screen and (max-width: @md){
+        @{name}: @value;
+    }
+}
+
+.md-block(@content){
+    @media screen and (max-width: @md){
+        @content();
+    }
+}
+
+.sm(@name, @value){
+    @media screen and (max-width: @sm){
+        @{name}: @value;
+    }
+}
+
+.sm-block(@content){
+    @media screen and (max-width: @sm){
+        @content();
+    }
+}
+
+.xs(@name, @value){
+    @media screen and (max-width: @xs){
+        @{name}: @value;
+    }
+}
+
+.xs-block(@content){
+    @media screen and (max-width: @xs){
+        @content();
+    }
+}
+
+.xxs(@name, @value){
+    @media screen and (max-width: @xxs){
+        @{name}: @value;
+    }
+}
+
+.xxs-block(@content){
+    @media screen and (max-width: @xxs){
+        @content();
+    }
+}
+
+.from(@min_width, @content){
+    @media screen and (min-width: @min_width){
+        @content();
+    }
+}
+
+.to(@max_width, @content){
+    @media screen and (max-width: @max_width){
+        @content();
+    }
+}
+
+.from-to(@min_width, @max_width, @content){
+    @media screen and (min-width: @min_width) and (max-width: @max_width){
+        @content();
+    }
+}
+
+.font-face(@font-family, @file-path, @font-weight, @font-style) {
+    @font-face {
+        font-family: @font-family;
+        src: url('@{file-path}.eot');
+        src: url('@{file-path}.eot?#iefix') format('embedded-opentype');
+        src: url('@{file-path}.woff') format('woff');
+        src: url('@{file-path}.ttf') format('truetype');
+        font-weight: @font-weight;
+        font-style: @font-style;
+    }
+}
